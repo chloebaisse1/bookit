@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 export default {
   content: [
@@ -14,5 +14,9 @@ export default {
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["cupcake", "dark", "lemonade"],
+  },
+} satisfies Config
