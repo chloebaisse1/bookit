@@ -1,0 +1,113 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "email": "dev2@gmail.com",
+  "familyName": "dev",
+  "givenName" : "dev2"
+}
+
+###
+
+POST http://localhost:3000/api/companies
+Content-Type: application/json
+
+{
+  "email": "baissechloe@gmail.com",
+  "companyName": "saas chloedev"
+}
+
+###
+
+GET http://localhost:3000/api/companies?email=baissechloe@gmail.com
+
+
+###
+
+DELETE http://localhost:3000/api/companies
+Content-Type: application/json
+
+{
+  "id": "cm5mb39cb0001xza1hgu7w8j1"
+}
+
+###
+
+PATCH http://localhost:3000/api/companies
+Content-Type: application/json
+
+{ "id":"cm5mfg2pk0005xza102nc4c1c",
+  "creatorEmail":"baissechloe@gmail.com",
+  "employeeEmail":"test@mail.com",
+  "action":"ADD"
+
+}
+###
+GET http://localhost:3000/api/employees?companyId=cm5mfg2pk0005xza102nc4c1c
+
+###
+
+POST http://localhost:3000/api/rooms
+Content-Type: application/json
+
+{
+  "action": "SAVE_DATA",
+  "name": "room1",
+  "capacity" : 4 ,
+  "description":"test",
+  "companyId":"cm5mfe18x0004xza1ay0js4yf"
+}
+
+###
+POST http://localhost:3000/api/rooms
+Content-Type: application/json
+
+{
+  "action": "SAVE_IMAGE",
+  "imageUrl":"image.jpg",
+  "roomId":"cm5nzsste0000xz9mxfhdcpzo"
+}
+
+###
+GET http://localhost:3000/api/rooms?companyId=cm5mcdaky0002xza1z4qnz4np
+
+###
+DELETE http://localhost:3000/api/rooms
+Content-Type: application/json
+
+{
+  "roomId":"cm5xvzgex0000xz6hpwa5atl4"
+}
+
+###
+POST http://localhost:3000/api/reservations
+Content-Type: application/json
+
+{
+  "email": "baissechloe@gmail.com",
+  "roomId": "cm5yy2w790003xzpsyfqo3y8l",
+  "reservationDate" : "16/01/2025",
+  "timeSlots": [
+    "10:00 - 11:00",
+    "14:00 - 16:00"
+    ]
+}
+###
+POST http://localhost:3000/api/disponibilities
+Content-Type: application/application/json
+
+{
+  "roomId": "cm5yy2w790003xzpsyfqo3y8l",
+  "reservationDate": "16/01/2025"
+}
+
+###
+GET http://localhost:3000/api/reservations?email=baissechloe@gmail.com
+
+###
+DELETE http://localhost:3000/api/reservations
+Content-Type: application/json
+
+{
+  "id":"cm5zdmasx000bxzmkw9bo2xes"
+}
