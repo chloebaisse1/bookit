@@ -110,6 +110,10 @@ Content-Type: application/json
 
 {
   "id":"cm5zdmasx000bxzmkw9bo2xes"
+<<<<<<< HEAD
 }
 ###
 DELETE http://localhost:3000/api/cleanupReservations
+=======
+}
+>>>>>>> f240706e89f5216d6bfd343997752a5ccc17b0d5

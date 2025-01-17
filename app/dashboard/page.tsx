@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable @typescript-eslint/no-explicit-any */
+=======
+>>>>>>> f240706e89f5216d6bfd343997752a5ccc17b0d5
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/rules-of-hooks */
@@ -17,6 +20,7 @@ const page = () => {
   const [rooms, setRooms] = useState<any[]>([])
   const [companyName, setCompanyName] = useState("")
 
+<<<<<<< HEAD
   const cleanupExpiredReservations = async () => {
     try {
       await fetch("/api/cleanupReservations", {
@@ -26,6 +30,8 @@ const page = () => {
       console.error(error)
     }
   }
+=======
+>>>>>>> f240706e89f5216d6bfd343997752a5ccc17b0d5
   const fetchCompanyId = async () => {
     if (user) {
       try {
@@ -73,7 +79,10 @@ const page = () => {
     const initializeData = async () => {
       await fetchCompanyId()
       await fetchRooms()
+<<<<<<< HEAD
       await cleanupExpiredReservations()
+=======
+>>>>>>> f240706e89f5216d6bfd343997752a5ccc17b0d5
     }
     initializeData()
   }, [user])

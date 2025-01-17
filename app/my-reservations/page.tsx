@@ -32,6 +32,7 @@ const page = () => {
   const { user } = useKindeBrowserClient()
   const [reservations, setReservations] = useState<Reservation[]>([])
 
+<<<<<<< HEAD
   const cleanupExpiredReservations = async () => {
     try {
       await fetch("/api/cleanupReservations", {
@@ -42,6 +43,8 @@ const page = () => {
     }
   }
 
+=======
+>>>>>>> f240706e89f5216d6bfd343997752a5ccc17b0d5
   const fetchReservations = async () => {
     if (!user?.email) return
 
@@ -78,7 +81,10 @@ const page = () => {
 
   useEffect(() => {
     fetchReservations()
+<<<<<<< HEAD
     cleanupExpiredReservations()
+=======
+>>>>>>> f240706e89f5216d6bfd343997752a5ccc17b0d5
   }, [user])
 
   return (

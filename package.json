@@ -14,7 +14,10 @@
     "@kinde-oss/kinde-auth-nextjs": "^2.4.6",
     "@prisma/client": "^6.1.0",
     "autoprefixer": "^10.4.20",
+<<<<<<< HEAD
     "dayjs": "^1.11.13",
+=======
+>>>>>>> f240706e89f5216d6bfd343997752a5ccc17b0d5
     "lucide-react": "^0.469.0",
     "next": "15.1.3",
     "react": "^19.0.0",
